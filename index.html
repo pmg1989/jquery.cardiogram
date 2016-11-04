@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>jquery-心电图效果</title>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/jquery.cardiogram.js" charset="utf-8"></script>
+	<style>
+		body {
+			text-align: center;
+			background-color: orange;
+		}
+
+		.cardiogram-box {
+			margin: 0 auto;
+			width: 426px;
+			height: 116px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="cardiogram-box" id="box1"></div>
+	<div class="cardiogram-box" id="box2"></div>
+	<div class="cardiogram-box" id="box3"></div>
+
+	<script type="text/javascript">
+		$(function() {
+			$("#box1").cardiogram({
+				width_mt: 426,
+				height_mt: 116,
+				img_url: 'images/wave.png',
+				dir: 'left',
+				parts: 50
+			});
+			$("#box2").cardiogram({
+				width_mt: 426,
+				height_mt: 116,
+				img_url: 'images/wave.png',
+				dir: 'right',
+				parts: 50
+			});
+			$("#box3").cardiogram({
+				width_mt: 426,
+				height_mt: 116,
+				img_url: 'images/wave.png',
+				dir: 'left',
+				reverse: true,
+				parts: 50
+			});
+		});
+	</script>
+</body>
+
+</html>
